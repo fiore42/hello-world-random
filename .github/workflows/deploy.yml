@@ -21,7 +21,7 @@ jobs:
       - name: Install function dependencies
         run: npm install --prefix functions
 
-      - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting --project hello-world-random --token "$FIREBASE_TOKEN"
+      - name: Deploy to Firebase
+        run: firebase deploy --only hosting,functions --project hello-world-random --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

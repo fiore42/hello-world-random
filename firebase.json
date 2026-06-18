@@ -3,7 +3,7 @@
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
-      { "source": "/api/hello", "function": "hello" }
+      { "source": "/api/hello", "run": { "serviceId": "hello", "region": "us-central1" } }
     ]
   },
   "functions": {
